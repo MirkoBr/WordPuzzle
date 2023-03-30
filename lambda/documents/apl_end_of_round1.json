@@ -1,0 +1,1127 @@
+{
+    "type": "APL",
+    "version": "1.1",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-layouts",
+            "version": "1.5.0"
+        }
+    ],
+    "settings": {},
+    "resources": [],
+    "styles": {
+        "bigText": {
+            "values": [
+                {
+                    "fontSize": "72dp",
+                    "textAlign": "center",
+                    "color": "black"
+                }
+            ]
+        }
+    },
+    "onMount": [],
+    "graphics": {},
+    "commands": {},
+    "layouts": {},
+    "mainTemplate": {
+        "parameters": [
+            "text",
+            "assets"
+        ],
+        "items": [
+            {
+                "type": "Container",
+                "when": "${@viewportProfile != @hubLandscapeSmall && @viewportProfile != @hubRoundSmall && @viewportProfile != @hubLandscapeXLarge && @viewportProfile != @hubLandscapeLarge && @viewportProfile != @hubLandscapeMedium}",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${assets.backgroundURL}"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerTitle": "${text.word_counter}",
+                        "headerAttributionText": "${text.all_round_counter}",
+                        "theme": "dark",
+                        "headerBackgroundColor": "grey",
+                        "headerSubtitle": "${text.score}"
+                    },
+                    {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "position": "relative",
+                        "direction": "row",
+                        "type": "Container",
+                        "width": "900dp",
+                        "height": "400dp",
+                        "paddingTop": "4dp",
+                        "paddingLeft": "16dp",
+                        "paddingRight": "50dp",
+                        "paddingBottom": "16dp",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "width": "300dp",
+                                "height": "400dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "16dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word1}",
+                                        "fontSize": "20dp",
+                                        "paddingTop": "15dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score1}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word2}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score2}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word3}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score3}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word4}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score4}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word5}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score5}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "500dp",
+                                "height": "400dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "100dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "alignItems": "center",
+                                "wrap": "noWrap",
+                                "justifyContent": "start",
+                                "items": [
+                                    {
+                                        "source": "${assets.vicURL}",
+                                        "scale": "fill",
+                                        "overlayColor": "rgba(0, 0, 0, .375)",
+                                        "borderRadius": "30",
+                                        "type": "Image",
+                                        "width": "450",
+                                        "height": "380",
+                                        "paddingTop": "24dp",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_message}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "top",
+                                        "fontStyle": "normal",
+                                        "fontSize": "40dp",
+                                        "fontWeight": "bold",
+                                        "type": "Text",
+                                        "width": "440dp",
+                                        "height": "50dp",
+                                        "paddingTop": "46dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "70dp"
+                                    },
+                                    {
+                                        "text": "${text.round_end_score}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontStyle": "normal",
+                                        "fontSize": "30dp",
+                                        "fontWeight": "normal",
+                                        "type": "Text",
+                                        "width": "400dp",
+                                        "height": "70dp",
+                                        "paddingTop": "200dp",
+                                        "paddingBottom": "12dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "75dp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "${text.help}"
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "when": "${@viewportProfile == @hubLandscapeLarge}",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${assets.backgroundURL}"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerTitle": "${text.word_counter}",
+                        "headerAttributionText": "${text.all_round_counter}",
+                        "theme": "dark",
+                        "headerBackgroundColor": "grey",
+                        "headerSubtitle": "${text.score}"
+                    },
+                    {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "position": "relative",
+                        "direction": "row",
+                        "type": "Container",
+                        "width": "1200dp",
+                        "height": "500dp",
+                        "paddingTop": "4dp",
+                        "paddingLeft": "16dp",
+                        "paddingRight": "50dp",
+                        "paddingBottom": "16dp",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "width": "500dp",
+                                "height": "500dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "16dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word1}",
+                                        "fontSize": "40dp",
+                                        "paddingTop": "25dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score1}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word2}",
+                                        "fontSize": "40dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score2}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word3}",
+                                        "fontSize": "40dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score3}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word4}",
+                                        "fontSize": "40dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score4}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word5}",
+                                        "fontSize": "40dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score5}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "500dp",
+                                "height": "400dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "100dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "alignItems": "center",
+                                "wrap": "noWrap",
+                                "justifyContent": "start",
+                                "items": [
+                                    {
+                                        "source": "${assets.vicURL}",
+                                        "scale": "fill",
+                                        "overlayColor": "rgba(0, 0, 0, .375)",
+                                        "borderRadius": "30",
+                                        "type": "Image",
+                                        "width": "600",
+                                        "height": "450",
+                                        "paddingTop": "24dp",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_message}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "top",
+                                        "fontStyle": "normal",
+                                        "fontSize": "40dp",
+                                        "fontWeight": "bold",
+                                        "type": "Text",
+                                        "width": "440dp",
+                                        "height": "50dp",
+                                        "paddingTop": "46dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "70dp"
+                                    },
+                                    {
+                                        "text": "${text.round_end_score}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontStyle": "normal",
+                                        "fontSize": "30dp",
+                                        "fontWeight": "normal",
+                                        "type": "Text",
+                                        "width": "400dp",
+                                        "height": "70dp",
+                                        "paddingTop": "200dp",
+                                        "paddingBottom": "12dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "75dp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "${text.help}"
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "when": "${@viewportProfile == @hubLandscapeMedium}",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${assets.backgroundURL}"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerTitle": "${text.word_counter}",
+                        "headerAttributionText": "${text.all_round_counter}",
+                        "theme": "dark",
+                        "headerBackgroundColor": "grey",
+                        "headerSubtitle": "${text.score}"
+                    },
+                    {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "position": "relative",
+                        "direction": "row",
+                        "type": "Container",
+                        "width": "900dp",
+                        "height": "400dp",
+                        "paddingTop": "4dp",
+                        "paddingLeft": "16dp",
+                        "paddingRight": "50dp",
+                        "paddingBottom": "16dp",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "width": "450dp",
+                                "height": "400dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "40dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word1}",
+                                        "fontSize": "30dp",
+                                        "paddingTop": "25dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score1}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word2}",
+                                        "fontSize": "30dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score2}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word3}",
+                                        "fontSize": "30dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score3}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word4}",
+                                        "fontSize": "30dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score4}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word5}",
+                                        "fontSize": "30dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score5}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "450dp",
+                                "height": "400dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "100dp",
+                                "paddingRight": "80dp",
+                                "paddingBottom": "16dp",
+                                "alignItems": "center",
+                                "wrap": "noWrap",
+                                "justifyContent": "start",
+                                "items": [
+                                    {
+                                        "source": "${assets.vicURL}",
+                                        "scale": "fill",
+                                        "overlayColor": "rgba(0, 0, 0, .375)",
+                                        "borderRadius": "30",
+                                        "type": "Image",
+                                        "width": "450dp",
+                                        "height": "380dp",
+                                        "paddingTop": "24dp",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_message}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "top",
+                                        "fontStyle": "normal",
+                                        "fontSize": "40dp",
+                                        "fontWeight": "bold",
+                                        "type": "Text",
+                                        "width": "440dp",
+                                        "height": "50dp",
+                                        "paddingTop": "46dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "20dp"
+                                    },
+                                    {
+                                        "text": "${text.round_end_score}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontStyle": "normal",
+                                        "fontSize": "30dp",
+                                        "fontWeight": "normal",
+                                        "type": "Text",
+                                        "width": "400dp",
+                                        "height": "70dp",
+                                        "paddingTop": "200dp",
+                                        "paddingBottom": "12dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "55dp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "${text.help}"
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "when": "${@viewportProfile == @hubLandscapeXLarge}",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${assets.backgroundURL}"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerTitle": "${text.word_counter}",
+                        "headerAttributionText": "${text.all_round_counter}",
+                        "theme": "dark",
+                        "headerBackgroundColor": "grey",
+                        "headerSubtitle": "${text.score}"
+                    },
+                    {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "position": "relative",
+                        "direction": "row",
+                        "type": "Container",
+                        "width": "1800dp",
+                        "height": "800dp",
+                        "paddingTop": "4dp",
+                        "paddingLeft": "16dp",
+                        "paddingRight": "50dp",
+                        "paddingBottom": "16dp",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "width": "700dp",
+                                "height": "700dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "16dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word1}",
+                                        "fontSize": "60dp",
+                                        "paddingTop": "25dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score1}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word2}",
+                                        "fontSize": "60dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score2}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word3}",
+                                        "fontSize": "60dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score3}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word4}",
+                                        "fontSize": "60dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score4}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word5}",
+                                        "fontSize": "60dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score5}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "900dp",
+                                "height": "600dp",
+                                "paddingTop": "1dp",
+                                "paddingLeft": "100dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "alignItems": "center",
+                                "wrap": "noWrap",
+                                "justifyContent": "start",
+                                "items": [
+                                    {
+                                        "source": "${assets.vicURL}",
+                                        "scale": "fill",
+                                        "overlayColor": "rgba(0, 0, 0, .375)",
+                                        "borderRadius": "30",
+                                        "type": "Image",
+                                        "width": "900",
+                                        "height": "750",
+                                        "paddingTop": "1dp",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_message}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "top",
+                                        "fontStyle": "normal",
+                                        "fontSize": "80dp",
+                                        "fontWeight": "bold",
+                                        "type": "Text",
+                                        "width": "850dp",
+                                        "height": "100dp",
+                                        "paddingTop": "60dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "70dp"
+                                    },
+                                    {
+                                        "text": "${text.round_end_score}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontStyle": "normal",
+                                        "fontSize": "80dp",
+                                        "fontWeight": "normal",
+                                        "type": "Text",
+                                        "width": "800dp",
+                                        "height": "70dp",
+                                        "paddingTop": "300dp",
+                                        "paddingBottom": "12dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "75dp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "${text.help}"
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "when": "${@viewportProfile == @hubLandscapeSmall}",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${assets.backgroundURL}"
+                    },
+                    {
+                        "type": "AlexaHeader",
+                        "headerTitle": "${text.word_counter}",
+                        "headerAttributionText": "${text.all_round_counter}",
+                        "theme": "dark",
+                        "headerBackgroundColor": "grey",
+                        "headerSubtitle": "${text.score}"
+                    },
+                    {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "position": "relative",
+                        "direction": "row",
+                        "type": "Container",
+                        "width": "900dp",
+                        "height": "320dp",
+                        "paddingTop": "80dp",
+                        "paddingLeft": "16dp",
+                        "paddingRight": "50dp",
+                        "paddingBottom": "16dp",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "width": "300dp",
+                                "height": "400dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "16dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "items": [
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word1}",
+                                        "fontSize": "20dp",
+                                        "paddingTop": "5dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score1}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word2}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score2}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word3}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score3}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word4}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score4}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    },
+                                    {
+                                        "type": "Text",
+                                        "text": "${text.word5}",
+                                        "fontSize": "20dp"
+                                    },
+                                    {
+                                        "type": "AlexaRating",
+                                        "theme": "dark",
+                                        "ratingSlotMode": "multiple",
+                                        "ratingSlotPadding": 4,
+                                        "ratingNumber": "${text.score5}",
+                                        "ratingText": "${text.score_text}",
+                                        "layoutDirection": "LTR",
+                                        "paddingBottom": "15dp"
+                                    }
+                                ]
+                            },
+                            {
+                                "type": "Container",
+                                "width": "450dp",
+                                "height": "450dp",
+                                "paddingTop": "16dp",
+                                "paddingLeft": "100dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "16dp",
+                                "alignItems": "center",
+                                "wrap": "noWrap",
+                                "justifyContent": "start",
+                                "items": [
+                                    {
+                                        "source": "${assets.vicURL}",
+                                        "scale": "fill",
+                                        "overlayColor": "rgba(0, 0, 0, .375)",
+                                        "borderRadius": "30",
+                                        "type": "Image",
+                                        "width": "400",
+                                        "height": "350",
+                                        "paddingTop": "24dp",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_message}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "top",
+                                        "fontStyle": "normal",
+                                        "fontSize": "32dp",
+                                        "fontWeight": "bold",
+                                        "type": "Text",
+                                        "width": "440dp",
+                                        "height": "50dp",
+                                        "paddingTop": "46dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "50dp"
+                                    },
+                                    {
+                                        "text": "${text.round_end_score}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontStyle": "normal",
+                                        "fontSize": "25dp",
+                                        "fontWeight": "normal",
+                                        "type": "Text",
+                                        "width": "400dp",
+                                        "height": "70dp",
+                                        "paddingTop": "200dp",
+                                        "paddingBottom": "12dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20",
+                                        "left": "75dp"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "${text.help}"
+                    }
+                ]
+            },
+            {
+                "type": "Container",
+                "when": "${@viewportProfile == @hubRoundSmall}",
+                "height": "100%",
+                "width": "100%",
+                "items": [
+                    {
+                        "type": "AlexaBackground",
+                        "backgroundImageSource": "${assets.backgroundURL}"
+                    },
+                    {
+                        "alignItems": "center",
+                        "justifyContent": "center",
+                        "alignSelf": "center",
+                        "position": "relative",
+                        "direction": "row",
+                        "type": "Container",
+                        "width": "300",
+                        "height": "300dp",
+                        "paddingTop": "80dp",
+                        "paddingLeft": "16dp",
+                        "paddingRight": "16dp",
+                        "paddingBottom": "16dp",
+                        "items": [
+                            {
+                                "type": "Container",
+                                "width": "300dp",
+                                "height": "300dp",
+                                "paddingTop": "2dp",
+                                "paddingLeft": "16dp",
+                                "paddingRight": "16dp",
+                                "paddingBottom": "32dp",
+                                "alignItems": "center",
+                                "wrap": "noWrap",
+                                "justifyContent": "start",
+                                "items": [
+                                    {
+                                        "source": "${assets.vicURL}",
+                                        "scale": "fill",
+                                        "overlayColor": "rgba(0, 0, 0, .375)",
+                                        "borderRadius": "30",
+                                        "type": "Image",
+                                        "width": "280",
+                                        "height": "280",
+                                        "paddingTop": "24dp",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_message}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "top",
+                                        "fontStyle": "normal",
+                                        "fontSize": "25dp",
+                                        "fontWeight": "bold",
+                                        "type": "Text",
+                                        "width": "300dp",
+                                        "height": "50dp",
+                                        "paddingTop": "40dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    },
+                                    {
+                                        "text": "${text.round_end_score}",
+                                        "layoutDirection": "LTR",
+                                        "color": "white",
+                                        "textAlign": "center",
+                                        "textAlignVertical": "center",
+                                        "fontStyle": "normal",
+                                        "fontSize": "22dp",
+                                        "fontWeight": "normal",
+                                        "type": "Text",
+                                        "width": "300dp",
+                                        "height": "70dp",
+                                        "paddingTop": "120dp",
+                                        "paddingBottom": "12dp",
+                                        "shadowColor": "black",
+                                        "alignSelf": "start",
+                                        "position": "absolute",
+                                        "shadowVerticalOffset": "20",
+                                        "shadowHorizontalOffset": "2",
+                                        "shadowRadius": "20"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "AlexaFooter",
+                        "theme": "dark",
+                        "hintText": "${text.help}"
+                    }
+                ]
+            }
+        ]
+    }
+}

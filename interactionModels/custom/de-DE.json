@@ -1,0 +1,187 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "wörter puzzle",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "StartRoundIntent",
+          "slots": [],
+          "samples": [
+            "eine neue runde bitte",
+            "lass mich eine neue runde spielen",
+            "neue runde spielen",
+            "ich möchte eine neue runde spielen",
+            "lass uns eine neue runde starten",
+            "ich möchte eine neue runde starten",
+            "neue runde",
+            "starte eine neue runde"
+          ]
+        },
+        {
+          "name": "GetAnswerIntent",
+          "slots": [
+            {
+              "name": "text",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "die antwort ist",
+            "meine antwort heist",
+            "meine antwort lautet",
+            "meine antwort ist ",
+            "meine antwort heißt {text}",
+            "meine antwort heist {text}",
+            "meine antwort lautet {text}",
+            "die neue antwort ist {text}",
+            "ich änder die antwort zu {text}",
+            "ich ändere sie zu {text}",
+            "dieses mal ist meine antwort {text}",
+            "ich sage dieses mal {text}",
+            "lass mich die antwort zu {text} ändern",
+            "ich ändere die antwort zu {text}",
+            "lass mich {text} sagen",
+            "ich glaube ich sage {text}",
+            "meine antwort soll {text}",
+            "die antwort ist {text}",
+            "neue antwort ist {text}",
+            "meine neue antwort ist {text}",
+            "ich denke ich sage {text}",
+            "ich sage {text}",
+            "ich antworte mit {text}",
+            "meine antwort ist {text}"
+          ]
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": [
+            "Ja meine antwort ist richtig",
+            "Ja das ist richtig",
+            "Ja ich bleibe bei meiner Antwort",
+            "Ja ich bleibe dabei",
+            "Ja das ist sie",
+            "Ja logge die Antwort bitte ein",
+            "Ja logge die Antwort ein",
+            "Ja log die Antwort ein",
+            "Ja log die Antwort bitte ein",
+            "Ja das ist meine Antwort"
+          ]
+        },
+        {
+          "name": "GetExampleIntent",
+          "slots": [],
+          "samples": [
+            "sage mir nochmal das beispiel an",
+            "nochmal das beispiel bitte",
+            "nochmal das beispiel",
+            "ich brauche ein beispiel",
+            "beispiel",
+            "bitte das beispiel",
+            "kannst du das beispiel sagen bitte",
+            "ich möchte das beispiel sehen",
+            "zeig mir das beispiel bitte"
+          ]
+        },
+        {
+          "name": "AMAZON.RepeatIntent",
+          "samples": []
+        },
+        {
+          "name": "GameStatisticsIntent",
+          "slots": [],
+          "samples": [
+            "was sind meine maximalen punkte",
+            "sage mir meine punkte",
+            "was ist meine maximal punktzahl",
+            "was ist meine höchste punktzahl",
+            "sage mir meinen highscore",
+            "Kennst du meinen highscore",
+            "Was ist mein highscore",
+            "Wie lautet mein Highscore",
+            "was sind meine spiel statistiken",
+            "zeige mir die statistiken ",
+            "kannst du mir meine statistiken sagen",
+            "was sind meine statistiken",
+            "meine statistiken",
+            "meine spiel statistiken",
+            "zeig mir meine spiel statistiken",
+            "zeig mir die spiel statistiken",
+            "statistiken",
+            "statistik",
+            "die statistiken bitte"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NextIntent",
+          "samples": []
+        }
+      ],
+      "types": []
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GetAnswerIntent",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "text",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1109046767537.133987141105"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.1109046767537.133987141105",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Wie heist deine Antwort?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Wie ist deine Antwort?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Wie lautet deine Antwort?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "13"
+}
