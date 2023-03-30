@@ -1,2 +1,2 @@
 # WordPuzzle
-Alignment-based puzzle game with everyday words.
+An Amazon Alexa alignment-based puzzle game with everyday words.
